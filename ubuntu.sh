@@ -18,7 +18,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh 
 sudo systemctl restart docker
 sudo systemctl enable docker
-sudo sed -i 's/disabled_plugins/enabled_plugins/' /etc/containerd/config.toml > temp
+sudo sed -i 's/disabled_plugins/enable_plugins/' /etc/containerd/config.toml > temp
 sudo sed -i 's/cri/containerd/' /etc/containerd/config.toml
 sudo systemctl restart docker
 sudo systemctl restart containerd
